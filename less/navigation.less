@@ -1,33 +1,71 @@
 // Navigation Styles here
-  nav {
+
+#wtf {
     width: 100%;
-    .border() ;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 2% 5%;
-    margin: 0 auto;
+    padding: 1% 2%;
+    height: 15%;
+    .border();
 
     @media @mobile {
+      width: 100%;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      background-color: red;
-    }
-
-    #nav-links {
-      display: flex;
+      flex-flow: column wrap;
       justify-content: center;
       align-items: center;
-      width: 50%;
-
-      a {
-        color: @shark;
-        text-decoration: none;
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin: 0 2%;
-      }
     }
-  }
+
+    #logo {
+      width: 30%;
+      padding: 0 2%;
+      text-align: center;
+
+        @media @mobile {
+          width: 100%;
+        }
+      }
+
+    #nav {
+      width: 70%;
+      justify-content: space-around;
+      padding: 2% 2%;
+
+      @media @mobile {
+        width: 100%;
+      }
+
+      #nav-links {
+        width: 100%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        @media @mobile {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        a {
+          color: @shark;
+          text-decoration: none;
+          font-size: 1.8rem;
+          cursor: pointer;
+
+
+          @media @mobile {
+            font-size: 1.6rem;
+            font-weight: 500;
+            padding: 1% 1%;
+            margin: 0 2%;
+          }
+        }
+
+      } // close nav-links
+    } // close nav
+  } // close wtf
