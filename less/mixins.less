@@ -1,1 +1,20 @@
 // Mixins in here
+
+.border() {
+  border-bottom: 2px dashed @silver;
+}
+
+.button() {
+  background-color: darken(@eastern-blue, 15%);
+  color: @white;
+  width: 80%;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 5% 10%;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @media @mobile {
+    background-color: lighten(@eastern-blue, 15%);
+  }
+}
